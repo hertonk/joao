@@ -109,7 +109,7 @@
                     <label for="n">Não</label>
                 </div>
             <input type="submit" value="Enviar" />
-            <!-- <a class="linkButton" href="login.html">Login</a> -->
+            <a class="linkButton" href="{{ URL::to('/') }}/login">Login</a>
         </form>
     </div>
 </body>

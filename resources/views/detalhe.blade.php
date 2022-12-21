@@ -102,6 +102,10 @@
                                 <td>{{ date('d/m/Y H:m:s', strtotime($participant->created_at)) }}</td>
                             </tr>
                             <tr>
+                                <th scope="row">Lote</th>
+                                <td>{{ $participant->lote }}</td>
+                            </tr>
+                            <tr>
                                 <td>
                                     @if($participant->status == 1)
 

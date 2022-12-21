@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Participant;
+use DateTime;
 
 class ParticipantController extends Controller
 {
@@ -39,6 +40,49 @@ class ParticipantController extends Controller
         $fileName2 = time().rand(1,99).'.'.$file2->extension();
 
         $file2->move($path2, $fileName2);
+        
+        $dataNow = new DateTime(date("Y-m-d"));
+
+        $lote = "1";
+
+        //Lotes
+
+        $inicioprimeirolote = new DateTime("2022-12-22");
+        $fimprimeirolote = new DateTime("2023-02-15");
+        
+        $iniciosegundolote = new DateTime("2023-02-16");
+        $fimseguntolote = new DateTime("2023-03-12");
+        
+        $inicioterceirolote = new DateTime("2023-03-13");
+        $fimterceirolote = new DateTime("2023-04-02");
+        
+        $inicioquartolote = new DateTime("2023-04-03");
+        $fimquartolote = new DateTime("2023-04-16");
+
+        //1 - 22/12/2022 a 15/02/2023
+        //2 - 16/02/2023 a 12/03/2023
+        //3 - 13/03/2023 a 02/04/2023
+        //4 - 03/04/2023 a 16/04/2023
+
+        if($dataNow >= $inicioprimeirolote && $dataNow <= $fimprimeirolote){
+
+            $lote = "1";
+
+        } else if($dataNow >= $iniciosegundolote && $dataNow <= $fimseguntolote){
+
+            $lote = "2";
+
+        } else if($dataNow >= $inicioterceirolote && $dataNow <= $fimterceirolote){
+
+            $lote = "3";
+
+        } else if($dataNow >= $inicioquartolote && $dataNow <= $fimquartolote){
+
+            $lote = "4";
+
+        }
+
+
 
         Participant::create([
             "name" => $request->name,
@@ -53,6 +97,7 @@ class ParticipantController extends Controller
             "athletic_id" => $request->athletic_id,
             "type" => $request->type,
             "accommodation" => $request->accommodation,
+            "lote" => $lote,
             "status" => "1"
         ]);
 

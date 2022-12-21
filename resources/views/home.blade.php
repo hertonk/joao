@@ -21,6 +21,7 @@
                                 <th scope="col">Nome</th>
                                 <th scope="col">Whatsapp</th>
                                 <th scope="col">Instagram</th>
+                                <th scope="col">Lote</th>
                                 <th scope="col">Status</th>
                                 <th scope="col"></th>
                             </tr>
@@ -31,7 +32,8 @@
                                 <th scope="row">{{ $item->id }}</th>
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->whatsapp }}</td>
-                                <td>{{ $item->instagram}}</td>
+                                <td>{{ $item->instagram }}</td>
+                                <td>{{ $item->lote }}</td>
                                 <td>
                                     @if($item->status == 1)
                                    

@@ -22,6 +22,7 @@ class Participant extends Model
         "athletic_id",
         "type",
         "accommodation",
+        "lote",
         "status"
     ];
 }
