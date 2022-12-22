@@ -23,6 +23,7 @@ class Participant extends Model
         "type",
         "accommodation",
         "lote",
+        "document",
         "status"
     ];
 }
