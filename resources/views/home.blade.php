@@ -4,6 +4,26 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+            <table class="table custom-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Lote 1</th>
+                                <th scope="col">Lote 2</th>
+                                <th scope="col">Lote 3</th>
+                                <th scope="col">Lote 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ count($lote1) }}</td>
+                                <td>{{ count($lote2)}}</td>
+                                <td>{{ count($lote3) }}</td>
+                                <td>{{ count($lote4) }}</td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+            <div class="col-md-8">
                 <div class="table-responsive custom-table-responsive">
                     <table class="table custom-table">
                         <thead>

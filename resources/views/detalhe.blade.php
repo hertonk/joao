@@ -125,12 +125,27 @@
                                                         <div class="text">
                                                             @if ($participant->accommodation == 's')
                                                                 Sim
-                                                            @elseif($participant->type == 'n')
+                                                            @elseif($participant->accommodation == 'n')
                                                                 Não
                                                             @endif
                                                         </div>
                                                     </li>
-
+                                                    <li>
+                                                        <div class="title">Nome de Crachá:</div>
+                                                        <div class="text">
+                                                            @if ($participant->cracha == 's')
+                                                                Sim
+                                                            @elseif($participant->cracha == 'n')
+                                                                Não
+                                                            @endif
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="title">Nome no Crachá:</div>
+                                                        <div class="text">
+                                                            {{ $participant->namecracha }}
+                                                        </div>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>

@@ -21,7 +21,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     padding: 0;
     /* padding-bottom: 50px; */
@@ -31,7 +30,7 @@ body{
     background-color: var(--color-dark2);
     padding: 2rem;
     border-radius: 10px;
-    width: 550px;
+    max-width: 400px;
     margin: 50px auto;
     /* margin-top: 50px; */
 }
@@ -129,7 +128,6 @@ button[type="button"]:hover{
 
 body,html{
 
-height: 100%;
 margin: 0;
 
 }

@@ -79,7 +79,10 @@
                         </span>
                     @enderror
                 </div>
-                <div>
+            </div>
+
+            <div class="d-flex-files">
+            <div>
                     <p>Anexe sua foto</p><br>
                         <input type="file" name="photo" placeholder="Anexe sua foto" class="inputs required" oninput="fileValidate()">
                         @error('photo')
@@ -88,11 +91,11 @@
                         </span>
                     @enderror
                 </div>
-
             </div>
+            
             <div class="d-flex-files">
                 <div>
-                    <p>Anexe um Documento (Cpf, RG ou CNH)</p><br>
+                    <p>Anexe um Documento (RG ou CNH)</p><br>
                         <input type="file" name="document" placeholder="Anexe um documento" class="inputs required" oninput="fileValidate()">
                         @error('document')
                         <span class="invalid-feedback" role="alert">
@@ -171,6 +174,27 @@
                     <span class="span-required">{{ $message }}</span>
                 </span>
             @enderror
+            <p>Nome no crachá?</p>
+            <div class="d-flex-files">
+                <div>
+                    <input type="radio" id="s" value="s" name="cracha">
+                    <label for="s">Sim</label>
+                </div>
+                <div>
+                    <input type="radio" id="n" value="n" name="cracha">
+                    <label for="n">Não</label>
+                </div>
+
+            </div>
+            @error('cracha')
+                <span class="invalid-feedback" role="alert">
+                    <span class="span-required">{{ $message }}</span>
+                </span>
+            @enderror
+            <p>Escolha o nome que aparecerá no crachá</p>
+            <div>
+                <input type="text" placeholder="Escolha o nome que aparecerá no crachá" name="namecracha" class="inputs">
+            </div>
             <div class="d-flex-files">
                 <button class="linkButton" type="submit" >Enviar </button>
                 <a class="linkButton" href="{{ URL::to('/') }}/login">Login</a>

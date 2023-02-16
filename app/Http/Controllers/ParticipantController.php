@@ -28,6 +28,7 @@ class ParticipantController extends Controller
             'athletic_id' => 'required',
             'type' => 'required',
             'accommodation' => 'required',
+            'cracha' => 'required',
             'document' => 'required',
         ],[],[
             'name' =>'Nome ',
@@ -38,6 +39,7 @@ class ParticipantController extends Controller
             'athletic_id' => 'Atlética',
             'type' => 'Tipo de inscrição',
             'accommodation' => 'Alojamento',
+            'cracha' => 'Cracha',
             'photo' => 'Foto',
             'document' => 'Documento',
         ]);
@@ -88,9 +90,9 @@ class ParticipantController extends Controller
         //Lotes
 
         $inicioprimeirolote = new DateTime("2022-12-22");
-        $fimprimeirolote = new DateTime("2023-02-15");
+        $fimprimeirolote = new DateTime("2023-02-16");
 
-        $iniciosegundolote = new DateTime("2023-02-16");
+        $iniciosegundolote = new DateTime("2023-02-17");
         $fimseguntolote = new DateTime("2023-03-12");
 
         $inicioterceirolote = new DateTime("2023-03-13");
@@ -137,6 +139,8 @@ class ParticipantController extends Controller
             "athletic_id" => $request->athletic_id,
             "type" => $request->type,
             "accommodation" => $request->accommodation,
+            "cracha" => $request->cracha,
+            "namecracha" => $request->namecracha,
             "document" => $fileName3,
             "lote" => $lote,
             "status" => "1"
